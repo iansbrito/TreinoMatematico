@@ -18,6 +18,11 @@
             padding: 20px;
             box-sizing: border-box;
         }
+        .operação {
+            font-size: 33px;
+            color: #ffae34;
+
+        }
 
         h2 {
             color: #ff9800;
@@ -60,7 +65,8 @@
 <body>
     <h2><b>Tipo de operação:</b><br> {{operacao}}</h2>
     <h2><b>Dificuldade:</b><br>{{dificuldade}}</h2>
-    <p><b>Realize a seguinte operação:</b><br>{{str_operacao}} =</p>
+    <p><b>Realize a seguinte operação</b><br></p>
+    <p class="operação">{{str_operacao}} = </p>
     <form action="resultado_operacao", method="POST">
     <input type="float" name="resposta_usuario" required><br>
     <button type="submit" class="btn btn-primary">Enviar resposta</button>
