@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino Matemático</title>
+    <style>
+        body {
+            background-color: rgb(37, 37, 37);
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* Adjust max-width as needed */
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            background-color: rgb(37, 37, 37);
+            box-sizing: border-box;
+            border: 8px solid rgb(59, 44, 44);
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="{{url_for('define_operacao')}}" width="100%" height="1080" style="border: 8px solid rgb(59, 44, 44); box-sizing: border-box;"></iframe>
+</body>
+</html>
