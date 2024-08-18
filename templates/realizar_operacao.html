@@ -23,12 +23,12 @@
 <body>
     <h2><b>Tipo de operação:</b><br> {{operacao}}</h2>
     <h2><b>Dificuldade:</b><br>{{dificuldade}}</h2>
-    <p><b>Realize a seguinte operação</b><br></p>
-    <p class="operação">{{str_operacao}} = </p>
+    <p><b>Realize a seguinte operação:</b><br></p>
+    <p class="operacao">{{str_operacao}} = </p>
     <form action="resultado_operacao" method="POST" onsubmit="return validateInput()">
-        <input type="text" name="resposta_usuario" id="resposta_usuario" required><br>
+        <input type="text" name="resposta_usuario" id="resposta_usuario" required placeholder="Aproximação 2 decimais"><br>
         <button type="submit" class="btn btn-primary">Enviar resposta</button>
-        <input type="hidden" name="resultado" value="{{resultado}}">
+        <input type="hidden"  name="resultado" value="{{resultado}}" placeholder="Em caso de resposta decimal utilize aproximação de duas casas decimais">
     </form>
     
 </body>
