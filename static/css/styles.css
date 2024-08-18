@@ -14,21 +14,7 @@ body {
     text-align: center;
 }
 
-/* Header Styles */
-.header-treino {
-    width: 100%; /* Ensure header takes full width */
-    text-align: center;
-    position: relative; /* Ensures it's above the iframe */
-    z-index: 10; /* Stacks the header above other elements */
-}
 
-.header-treino-texto {
-    color: #ff9800;
-    font-family: Helvetica, sans-serif;
-    font-size: 3rem; 
-    text-shadow: 2px 1px #03263e;
-    margin-bottom: 20px;
-}
 
 /* Form Styles */
 form {
@@ -38,12 +24,12 @@ form {
 }
 
 .back-btn {
-    display: inline-block; /* Makes the link behave like a button */
+    display: inline-block; /*  */
     padding: 10px 20px;
     background-color: #004f87;
     color: #ffffff;
     text-align: center;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none; /*  */
     border-radius: 45px;
     font-size: 18px;
     cursor: pointer;
@@ -60,7 +46,7 @@ form {
 
 .back-btn:focus {
     outline: none;
-    box-shadow: 0 0 10px #004f87;
+    box-shadow: 0 0 10px teal;
 }
 /* Button Styles */
 button {
@@ -78,12 +64,12 @@ button {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 220px;
+    width: 250px;
     height: 50px;
 }
 
 button:hover {
-    background-color: #004f87;
+    background-color: teal;
 }
 
 button:focus {
@@ -97,12 +83,89 @@ button:active {
 
 /* Iframe Styles */
 iframe {
-    position: relative; /* Changed from absolute to relative */
-    margin-top: 20px; /* Adds space between the header and iframe */
+    position: relative; /*  */
+    margin-top: 20px; /* */
     width: 88%;
     height: 88%;
     border-radius: 15px;
-    border: 8px solid rgb(1, 101, 101);
+    border: 8px solid teal;
     box-shadow: inset 20px 5px 50px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
+}
+
+.title-container {
+    position: relative;
+    overflow: hidden;
+    background-color: teal;
+    border-radius: 45px;
+    border: 20px;
+    border-color: orange;
+    width: 88%;
+    height: 22%;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: 33px;
+    align-items: top;
+    justify-content: flex;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    pointer-events: none; /* */
+    white-space: nowrap; /*  */
+    color: orange;
+    font-size: calc(2vw + 2vh + 2vmin); /*  */
+    text-shadow: #004f87aa;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%; /* */
+    width: 200%; 
+    height: 440%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255, 255, 255, 0.426) 50%, rgba(255,255,255,0) 70%);
+    transform: translateY(-50%);
+    pointer-events: none;
+    animation: lightRay 6s infinite linear; /*  */
+}
+
+@keyframes lightRay {
+    0% {
+        left: -250%; /*  */
+    }
+    100% {
+        left: 120%; /*  */
+    }
+}
+
+.title-container:hover .title::before {
+    left: calc(var(--mouse-x) - 50%);
+    transition: left 0.1s ease;
+    animation: none; /* */
+}
+
+.title-container {
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+.title-container:hover {
+    cursor: pointer;
+}
+
+.title-container:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+.operacao {
+    font-size: 3rem;
 }
