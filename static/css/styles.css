@@ -87,8 +87,8 @@ iframe {
     margin-top: 20px; /* */
     width: 88%;
     height: 88%;
-    border-radius: 15px;
-    border: 8px solid teal;
+    border-radius: 55px;
+    border: 12px solid teal;
     box-shadow: inset 20px 5px 50px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
 }
@@ -107,8 +107,10 @@ iframe {
 }
 
 .title {
-    margin-top: 33px;
-    align-items: top;
+    text-shadow: #004f87aa;
+
+    margin-top: 0px;
+    align-items: center;
     justify-content: flex;
     color: #fff;
     position: relative;
@@ -117,8 +119,7 @@ iframe {
     white-space: nowrap; /*  */
     color: orange;
     font-size: calc(2vw + 2vh + 2vmin); /*  */
-    text-shadow: #004f87aa;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .title::before {
